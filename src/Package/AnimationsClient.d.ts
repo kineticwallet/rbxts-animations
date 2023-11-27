@@ -1,4 +1,4 @@
-import AnimationClass from "./Utils/AnimationsClass";
+import AnimationClass from "./Util/AnimationsClass";
 
 declare type initOptions = {
 	AutoLoadPlayerTracks?: boolean;
