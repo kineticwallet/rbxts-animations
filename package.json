@@ -1,11 +1,10 @@
 {
-	"name": "@rbxts/rbxts-package-template",
-	"version": "1.0.0",
+	"name": "@rbxts/animations",
+	"version": "1.0.4",
 	"description": "",
-	"main": "out/init.lua",
 	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"author": "kineticwallet",
+	"license": "MIT",
 	"types": "out/index.d.ts",
 	"files": [
 		"out",
@@ -13,6 +12,15 @@
 	],
 	"publishConfig": {
 		"access": "public"
+	},
+	"readme": "README.md",
+	"bugs": {
+		"url": "https://github.com/kineticwallet/rbxts-animations/issues"
+	},
+	"homepage": "https://github.com/kineticwallet/rbxts-animations",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kineticwallet/rbxts-animations"
 	},
 	"devDependencies": {
 		"@rbxts/compiler-types": "2.2.0-types.0",
