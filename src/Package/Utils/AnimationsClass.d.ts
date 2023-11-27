@@ -1,18 +1,18 @@
-declare class AnimationClass {
-	public AwaitLoaded(player_or_rig: Player | Model): void;
-	public AreTracksLoaded(player_or_rig: Player | Model): boolean;
-	public LoadTracks(player_or_rig: Player | Model, rigType: string): void;
-	public GetTrack(player_or_rig: Player | Model, path: any): AnimationTrack | undefined;
+declare interface AnimationClass {
+	AwaitLoaded(player_or_rig: Player | Model): void;
+	AreTracksLoaded(player_or_rig: Player | Model): boolean;
+	LoadTracks(player_or_rig: Player | Model, rigType: string): void;
+	GetTrack(player_or_rig: Player | Model, path: unknown): AnimationTrack | undefined;
 	PlayTrack(
 		player_or_rig: Player | Model,
-		path: any,
+		path: unknown,
 		fadeTime?: number,
 		weight?: number,
 		speed?: number,
 	): AnimationTrack;
-	StopTrack(player_or_rig: Player | Model, path: any, fadeTime?: number): AnimationTrack;
-	public GetTrackFromAlias(player_or_rig: Player | Model, alias: unknown): AnimationTrack | undefined;
-	public PlayTrackFromAlias(
+	StopTrack(player_or_rig: Player | Model, path: unknown, fadeTime?: number): AnimationTrack;
+	GetTrackFromAlias(player_or_rig: Player | Model, alias: unknown): AnimationTrack | undefined;
+	PlayTrackFromAlias(
 		player_or_rig: Player | Model,
 		alias: unknown,
 		fadeTime?: number,
@@ -20,8 +20,8 @@ declare class AnimationClass {
 		speed?: number,
 	): AnimationTrack;
 	StopTrackFromAlias(player_or_rig: Player | Model, alias: unknown, fadeTime?: number): AnimationTrack;
-	public SetTrackAlias(player_or_rig: Player | Model, alias: unknown, path: unknown): void;
-	public RemoveTrackAlias(player_or_rig: Player | Model, alias: unknown): void;
+	SetTrackAlias(player_or_rig: Player | Model, alias: unknown, path: unknown): void;
+	RemoveTrackAlias(player_or_rig: Player | Model, alias: unknown): void;
 }
 
 export = AnimationClass;

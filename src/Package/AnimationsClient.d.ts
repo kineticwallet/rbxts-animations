@@ -5,10 +5,12 @@ declare type initOptions = {
 	TimeToLoadPrints?: boolean;
 };
 
-declare class AnimationsClient extends AnimationClass {
-    private AutoLoadPlayerTracks: boolean
-    private TimeToLoadPrints: boolean
-    public Init(initOptions?: initOptions): void;
+declare interface AnimationsClient extends AnimationClass {
+	AutoLoadPlayerTracks: boolean;
+	TimeToLoadPrints: boolean;
+	Init(initOptions?: initOptions): void;
 }
 
-export = AnimationsClient
+declare const AnimationsClient: AnimationsClient;
+
+export = AnimationsClient;

@@ -6,7 +6,7 @@ declare type initOptions = {
 	EnableAutoCustomRBXAnimationIds?: boolean;
 };
 
-interface customRBXAnimationIds {
+declare interface customRBXAnimationIds {
 	run: number | undefined;
 	walk: number | undefined;
 	jump: number | undefined;
@@ -21,12 +21,14 @@ interface customRBXAnimationIds {
 	swimIdle: number | undefined;
 	climb: number | undefined;
 }
-declare class AnimationsServer extends AnimationClass {
-	private AutoLoadPlayerTracks: boolean;
-	private TimeToLoadPrints: boolean;
-	private EnableAutoCustomRBXAnimationIds: boolean;
-	public Init(initOptions?: initOptions): void;
-	public ApplyCustomRBXAnimationIds(player: Player, customRBXAnimationIds: customRBXAnimationIds): void;
+declare interface AnimationsServer extends AnimationClass {
+	AutoLoadPlayerTracks: boolean;
+	TimeToLoadPrints: boolean;
+	EnableAutoCustomRBXAnimationIds: boolean;
+	Init(initOptions?: initOptions): void;
+	ApplyCustomRBXAnimationIds(player: Player, customRBXAnimationIds: customRBXAnimationIds): void;
 }
+
+declare const AnimationsServer: AnimationsServer;
 
 export = AnimationsServer;

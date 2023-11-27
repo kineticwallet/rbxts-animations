@@ -4,7 +4,11 @@
 	"description": "",
 	"keywords": [],
 	"author": "kineticwallet",
+	"contributors": [
+		"wrello"
+	],
 	"license": "MIT",
+	"main": "",
 	"types": "out/index.d.ts",
 	"files": [
 		"out",
